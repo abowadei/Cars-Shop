@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="contents">
+    @*<div id="adbox">*@
+        <div id="search">
+            <h3>Quick Search</h3>
+            <p>
+            </p>
+            <form action="index.html" method="post">
+                <ul>
+                    <li>
+                        <select id="size">
+                            <option>Search by Size</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="color">
+                            <option>Search by Color</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="brand">
+                            <option>Search by Brand</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="style">
+                            <option>Search by Style</option>
+                        </select>
+                    </li>
+                </ul>
+                <input type="submit" value="Find My Pair!" class="button">
+            </form>
+        </div>
+        <img src="Images/shop-now.jpg" height="355" width="618" alt="Promo"> <a href="index.html" class="button"></a> <span></span>
+    @*</div>*@
+    <div id="main">
+        <div id="featured">
+            <h4><span>Featured Items</span></h4>
+            <ul class="items">
+
+                @foreach (var item in Model)
+                {
+                    <li>
+       <a href="product.html"> <img src="@item.Image" width="169" height="168" alt="Img"> 
+                        <span>@item.Price</span> @item.CarName 
+     </a>
+
+                    </li>
+                }
+                        @*<li>
+                    <a href="product.html"> <img src="Images/download1.jpg" width="169" height="168" alt="Img"> <span>$19000.500</span> Toyata </a>
+                </li>
+
+                <li>
+                    <a href="product.html"> <img src="Images/download2.jpg" width="169" height="168" alt="Img"> <span>$100009.50</span> Opel </a>
+                </li>
+                <li>
+                    <a href="product.html"> <img src="images/download3.jpg" width="169" height="168" alt="Img"> <span>$13423429.50</span> Kia </a>
+                </li>
+                <li>
+                    <a href="product.html"> <img src="images/download4.jpg" width="169" height="168" alt="Img"> <span>$13432459.50</span> BMW </a>
+                </li>*@
+
+</ul>
+            @*<ul class="items">
+                <li>
+                    <a href="product.html"> <img src="Images/download1.jpg" width="169" height="168" alt="Img"> <span>$19000.500</span> Toyata </a>
+                </li>
+
+                <li>
+                    <a href="product.html"> <img src="Images/download2.jpg" width="169" height="168" alt="Img"> <span>$100009.50</span> Opel </a>
+                </li>
+                <li>
+                    <a href="product.html"> <img src="images/download3.jpg" width="169" height="168" alt="Img"> <span>$13423429.50</span> Kia </a>
+                </li>
+                <li>
+                    <a href="product.html"> <img src="images/download4.jpg" width="169" height="168" alt="Img"> <span>$13432459.50</span> BMW </a>
+                </li>
+
+            </ul>*@
+        </div>
+        <div id="sale">
+            <h4><span>Sale Items</span></h4>
+            <ul class="items">
+                <li>
+                    <a href="product.html"> <img src="images/106651_H2.jpg" width="169" height="168" alt="Img"> <span>$8000000.50</span> BMW </a>
+                </li>
+                <li>
+                    <a href="product.html"> <img src="images/download5.jpg" width="169" height="168" alt="Img"> <span>$545465.50</span> Ford </a>
+                </li>
+                <li>
+                    <a href="product.html"> <img src="images/images1.jpg" width="169" height="168" alt="Img"> <span>$6546464.50</span> Renulat </a>
+                </li>
+                <li>
+                    <a href="product.html"> <img src="images/opel.jpg" width="169" height="168" alt="Img"> <span>$8.50</span> OPel </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+

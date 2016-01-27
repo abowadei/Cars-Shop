@@ -1,0 +1,27 @@
+﻿@model testDb.ViewModel.AddNewCar
+@{
+    ViewBag.Title = "AddCar";
+}
+<h2>AddCar</h2>
+
+@using (Html.BeginForm("AddCar","Home",FormMethod.Post,new { enctype= "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(u => u.CarName)
+        @Html.TextBoxFor(u => u.CarName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(u => u.Model)
+        @Html.TextBoxFor(u => u.Model, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Price)
+        @Html.TextBoxFor(u => u.Price, new {type= "number", @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Image)
+        <input type="file" value="Browes" name="Image"  />
+    </div>
+    <input type="submit" value="Add Car!" class="btn btn-success" />
+}

@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "ShowCars";
+}
+
+<h2>ShowCars</h2>
+
+@Html.ActionLink("ADD NEW CAR ", "AddCar", "Home")
+
+<table>
+    <tr>
+            @foreach (var item in Model)
+            {
+
+
+                <td>
+                    <img src="@item.Image" width="90" height="90" />
+                    <p> @item.CarName </p>
+                    <p> @item.Model </p>
+                    <p> @item.Price </p>
+                 <a href="/Home/DeletCar?ID=@item.CarId"> Delet </a> 
+               
+
+            </td>
+        
+    }
+        </tr>
+</table>
+
+
+@*<table>
+    <tr>
+        <th>Car Name &nbsp;&nbsp; </th>
+        <th>Model &nbsp;&nbsp; </th>
+        <th>Price &nbsp;&nbsp; </th>
+        <th> Image &nbsp;&nbsp;</th>
+        
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+       
+        <tr>
+            <td>@item.CarName &nbsp;</td>
+            <td>@item.Model</td>
+            <td>@item.Price</td>
+            <td><img src="@item.Image" width="64" /></td>
+
+        </tr>
+    }
+</table>*@
