@@ -26,6 +26,14 @@ namespace testDb.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Cars.AddOrUpdate(
+                car => car.CarName,
+                new Models.Car { CarName = "Testing Car I", Image = "aljfals", Model = "Testla", Price = 300000 },
+                new Models.Car { CarName = "Testing Car II", Image = "aljfals", Model = "Testla", Price = 300000 },
+                new Models.Car { CarName = "Testing Car III", Image = "aljfals", Model = "Testla", Price = 300000 }
+
+                );
         }
     }
 }
